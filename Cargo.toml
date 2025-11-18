@@ -9,7 +9,7 @@ edition = "2021"
 
 [dependencies]
 alloy-primitives = "^0.8"
-alloy-sol-types = { version = "^0.15", features = ["eip712-serde", "json"] }
+alloy-sol-types = { version = "^0.8", features = ["eip712-serde", "json"] }
 ureq = { version = "2.10.1", features = ["json", "charset"] }
 alloy-signer-local = { version = "^0.15", features = ["eip712"] }
 alloy-signer = { version = "^0.15", features = ["eip712"] }
