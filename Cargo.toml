@@ -8,17 +8,17 @@ version = "0.1.1"
 edition = "2021"
 
 [dependencies]
-alloy-primitives = "^0.8"
-alloy-sol-types = { version = "^0.8", features = ["eip712-serde", "json"] }
+alloy-primitives = "^1"
+alloy-sol-types = { version = "^1", features = ["eip712-serde", "json"] }
 ureq = { version = "2.10.1", features = ["json", "charset"] }
-alloy-signer-local = { version = "^0.15", features = ["eip712"] }
-alloy-signer = { version = "^0.15", features = ["eip712"] }
+alloy-signer-local = { version = "^1", features = ["eip712"] }
+alloy-signer = { version = "^1", features = ["eip712"] }
 base64 = "0.22.1"
 hmac = "0.12.1"
 sha2 = "0.10.8"
 anyhow = "1.0.93"
-serde = "1.0.215"
-serde_json = "1.0.133"
+serde = "1"
+serde_json = "1"
 reqwest = { version = "0.12.9", features = ["json"] }
 rust_decimal = { version = "1.36.0", features = ["serde-with-str"] }
 rand = "0.8.5"
