@@ -497,8 +497,12 @@ impl ClobClient {
         let headers = create_l2_headers(signer, creds, method.as_str(), endpoint, Some(&body))?;
 
         let req = self.create_request_with_headers(method, endpoint, headers.into_iter());
+        let res = req.json(&body).send().await?;
+        println!("res:{:?}", res);
 
-        Ok(req.json(&body).send().await?.json::<Value>().await?)
+        Ok(res.json::<Value>().await?)
+        // Ok(req.json(&body).send().await?.json::<Value>().await?)
+
     }
 
     pub async fn create_and_post_order(&self, order_args: &OrderArgs) -> ClientResult<Value> {
